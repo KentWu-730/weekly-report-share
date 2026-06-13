@@ -130,7 +130,7 @@ def get_public_site_url() -> str:
         value = PUBLIC_SITE_URL_FILE.read_text(encoding="utf-8").strip()
         if value:
             return value
-    return "https://yuyao-chenwu-weekly-report.pages.dev/weekly_report/latest.md"
+    return "https://kentwu-730.github.io/weekly-report-share/weekly_report/latest.md"
 
 
 def get_current_shop_context() -> dict[str, str]:
@@ -208,8 +208,8 @@ def sync_site_from_reports(input_dir: Path) -> list[Path]:
     subprocess.run(["python3", str(Path(__file__).resolve().parent / "build_github_pages_site.py")], check=True)
 
     share_links = [
-        ("desktop_upload_and_render_url", "https://yuyao-chenwu-weekly-report.pages.dev/md-viewer.html"),
-        ("mobile_latest_report_url", "https://yuyao-chenwu-weekly-report.pages.dev/weekly_report/latest.html"),
+        ("desktop_upload_and_render_url", "https://kentwu-730.github.io/weekly-report-share/md-viewer.html"),
+        ("mobile_latest_report_url", "https://kentwu-730.github.io/weekly-report-share/weekly_report/latest.html"),
     ]
     share_text = "\n".join(f"{key}: {value}" for key, value in share_links) + "\n"
     (WEEKLY_REPORT_DIR / "latest_share_links.txt").write_text(share_text, encoding="utf-8")
@@ -265,8 +265,8 @@ def mirror_reports(source_dir: Path, output_dir: Path) -> list[Path]:
         share_links = {
             "source_report_dir": str(source_dir),
             "public_output_dir": str(output_dir),
-            "desktop_upload_and_render_url": "https://yuyao-chenwu-weekly-report.pages.dev/md-viewer.html",
-            "mobile_latest_report_url": "https://yuyao-chenwu-weekly-report.pages.dev/weekly_report/latest.html",
+            "desktop_upload_and_render_url": "https://kentwu-730.github.io/weekly-report-share/md-viewer.html",
+            "mobile_latest_report_url": "https://kentwu-730.github.io/weekly-report-share/weekly_report/latest.html",
         }
         (output_dir / "latest_share_links.txt").write_text(
             "\n".join(f"{k}: {v}" for k, v in share_links.items()) + "\n",

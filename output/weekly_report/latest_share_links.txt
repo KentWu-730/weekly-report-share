@@ -1,2 +1,2 @@
-desktop_upload_and_render_url: https://yuyao-chenwu-weekly-report.pages.dev/md-viewer.html
-mobile_latest_report_url: https://yuyao-chenwu-weekly-report.pages.dev/weekly_report/latest.html
+desktop_upload_and_render_url: https://kentwu-730.github.io/weekly-report-share/md-viewer.html
+mobile_latest_report_url: https://kentwu-730.github.io/weekly-report-share/weekly_report/latest.html
